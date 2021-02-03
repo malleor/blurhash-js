@@ -14,5 +14,6 @@ const decode_variant = function(blur_hash, decode, canvas_id) {
   ctx.putImageData(imageData, 0, 0);
 };
 
-decode_variant("LFDv4iofM|M{E8%MM{of0LWCoxoy", decode_gt, "#output_gt");
-decode_variant("LFDv4iofM|M{E8%MM{of0LWCoxoy", decode_vanilla, "#output_vanilla");
+const blur_hash = "LTL|cM?a-:S1~AozSwXQMdjFD%jF";
+decode_variant(blur_hash, decode_gt, "#output_gt");
+decode_variant(blur_hash, decode_vanilla, "#output_vanilla");
