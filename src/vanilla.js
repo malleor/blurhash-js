@@ -66,9 +66,9 @@ export function decode(blur_hash, width, height){
         [dc_r, dc_g, dc_b] = dc_rgb.map(linear_to_sRGB),
         ac = decode_ac(blur_hash.substr(6), nx, ny, max_ac, dc_rgb);
 
-  console.log("num_components:", nx, ny);
-  console.log("max AC:", max_ac);
-  console.log("DC:", dc_rgb);
+  // console.log("num_components:", nx, ny);
+  // console.log("max AC:", max_ac);
+  // console.log("DC:", dc_rgb);
 
   let pixels = new Uint8ClampedArray(width*height*4);
   for(let y=0; y<height; y++) {

@@ -7,9 +7,13 @@ import $ from 'jquery';
 const decode_variant = function(blur_hash, decode, canvas_id) {
   let canvas = $(canvas_id);
   const width=canvas.attr("width"), height=canvas.attr("height");
-  const pixels = decode(blur_hash, width, height);
   const ctx = canvas.get(0).getContext("2d");
   const imageData = ctx.createImageData(width, height);
+
+  console.time(canvas_id);
+  const pixels = decode(blur_hash, width, height);
+  console.timeEnd(canvas_id);
+
   imageData.data.set(pixels);
   ctx.putImageData(imageData, 0, 0);
 };
